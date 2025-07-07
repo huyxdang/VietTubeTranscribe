@@ -2,51 +2,6 @@ from pydub import AudioSegment, silence
 import os
 from glob import glob
 
-INPUT_DIR = "downloads"
-OUTPUT_DIR = "segments"
-os.makedirs(OUTPUT_DIR, exist_ok = True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Input & output folders
 INPUT_DIR = "downloads"
 OUTPUT_DIR = "segments"
@@ -68,7 +23,7 @@ for file_index, filepath in enumerate(audio_files):
     audio = AudioSegment.from_wav(filepath)
 
     # Calculate silence threshold relative to average volume
-    silence_thresh = audio.dBFS - SILENCE_THRESH_PAD
+    silence_thresh = audio.dBFS - SILENCE_THRESH_PAD # Subtracting 16 because standard for speech segmentation 
 
     # Split on silence
     chunks = silence.split_on_silence(
