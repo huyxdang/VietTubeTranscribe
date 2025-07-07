@@ -2,8 +2,8 @@ from pydub import AudioSegment, silence
 import os
 
 # Define input & output paths
-input_path = "downloads/Sợ Nợ Nần Là Một Tâm Lý Tệ.wav"
-output_dir = "segments_trial"
+input_path = "downloads_16kHz/choi game.wav"
+output_dir = "segments_trial_16kHz"
 os.makedirs(output_dir, exist_ok=True)
 
 # Load audio
