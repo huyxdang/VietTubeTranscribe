@@ -11,13 +11,13 @@ audio = AudioSegment.from_wav("downloads_16kHz/cam 100 trieu.wav")
 five_minutes = 5 * 60 * 1000  # = 300,000 ms
 
 # Define 90 seconds in milliseconds
-ninety_seconds = 115 * 1000 # = 900,000 ms
+start = 115 * 1000 # = 
 
 # Extract the first 5 minutes
 first_five = audio[:five_minutes]
 
 # Trim the first 90 seconds
-trimmed_five = first_five[ninety_seconds:]
+trimmed_five = first_five[start:]
 
 output_path = os.path.join(output_folder, "trimmed_sample.wav")
 # Export to a new file
