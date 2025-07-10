@@ -4,7 +4,7 @@ import datetime
 
 output_folder = "Audio/audio5_trimmed"
 os.makedirs(output_folder, exist_ok = True)
-input_path = "Audio/audio5/Thà nợ ngân hàng còn hơn nợ bạn.wav" # Change this
+input_path = "Audio/audio5/HOA HẬU làm được nhiều hơn ngoài 'XINH ĐẸP'.wav" # CHANGE THIS
 filename = os.path.splitext(os.path.basename(input_path))[0]  
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
@@ -40,7 +40,7 @@ def end_time(hour: int, minute: int, second: int) -> int:
 
 
 # Trimming
-trimmed_five = audio[start_time(1, 22):end_time(0, 58, 57)] # CHANGE THIS
+trimmed_five = audio[start_time(1, 11):end_time(0, 33, 18)] # CHANGE THIS
 
 output_path = os.path.join(output_folder, f"{filename}_trimmed_{timestamp}.wav")
 # Export to a new file
